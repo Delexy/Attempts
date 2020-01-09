@@ -1,0 +1,106 @@
+body {
+    padding-top: 4rem;
+}
+
+.signup-title {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 1rem;
+    color: #010541;
+}
+
+.signup-form {
+    width: 30rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 8rem auto;
+    grid-gap: 1rem 0.5rem;
+    align-items: center;
+}
+
+.signup-form label {
+    font-weight: bold;
+}
+
+.signup-form select,
+.signup-form input:not([type="checkbox"]) {
+    width: 100%;
+    margin: 0.3rem 0;
+    font: inherit;
+}
+
+.signup-form input[type="checkbox"],
+.signup-form input[type="checkbox"] + label {
+    margin: 1rem 0;
+    vertical-align: middle;
+}
+
+
+.signup-form input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+}
+
+.signup-form button[type="submit"] {
+    grid-column: span 2;
+    justify-self: center;
+    margin: 0 auto;
+}
+
+.signup-form select:valid,
+.signup-form input:valid {
+    border: 2px solid green;
+    background-color: #50cc50;
+}
+
+.signup-form select:invalid,
+.signup-form input:invalid {
+    border: 2px solid red;
+    background-color: #ff7d7d;
+}
+
+.signup-form select:focus,
+.signup-form input:not([type="checkbox"]):focus {
+    outline: none;
+    border: 2px solid #000986 ;
+    background-color: #000ed3;
+    color: white;
+}
+
+.signup-form [type="checkbox"] {
+    outline: none;
+}
+
+.signup-form__checkbox {
+    grid-column: span 2;
+    justify-self: center;
+}
+
+#agree-terms {
+    background-color: ff7d7d;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#agree-terms:checked {
+    background-color: green;
+    border-radius: 50%;
+}
+
+.signup-form button[disabled] {
+    cursor: not-allowed;
+    background-color: #ccc;
+    color: white;
+}
+
+.signup-form button[disabled]:hover,
+.signup-form button[disabled]:active {
+    font-size: 1rem;
+}
+
+@media (max-width: 40rem) {
+    .signup-form {
+        width: 90%;
+    }
+}
