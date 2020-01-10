@@ -2,8 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
 * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
@@ -11,37 +10,13 @@
 }
 
 body {
-    display: -ms-grid;
     display: grid;
 }
 
 main {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 46rem 46.25rem auto auto;
     grid-template-rows: 46rem 46.25rem auto auto;
-    -ms-grid-columns: 100%;
     grid-template-columns: 100%;
-}
-
-main > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-}
-
-main > *:nth-child(2) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-}
-
-main > *:nth-child(3) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-}
-
-main > *:nth-child(4) {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
 }
 
 /* Header */
@@ -57,15 +32,9 @@ main > *:nth-child(4) {
 
 .main-header__nav {
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .main-header .nav__logo {
@@ -77,18 +46,14 @@ main > *:nth-child(4) {
     color: white;
     background-color: #11749e;
     margin-left: 215px;
-    -webkit-box-shadow: 15px 8px 0px #d2d2d2;
-            box-shadow: 15px 8px 0px #d2d2d2;
+    box-shadow: 15px 8px 0px #d2d2d2;
 }
 
 .nav__items {
     list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     justify-self: right;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     position: relative;
 }
 
@@ -113,41 +78,27 @@ main > *:nth-child(4) {
     position: absolute;
     bottom: 0.1rem;
     left: 0.5rem;
-    -webkit-transition: -webkit-transform 0.2s ease-in-out;
-    transition: -webkit-transform 0.2s ease-in-out;
-    -o-transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
-    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 
 .second-item:hover ~ .nav__selector {
-    -webkit-transform: translateX(7.3rem);
-        -ms-transform: translateX(7.3rem);
-            transform: translateX(7.3rem);
+    transform: translateX(7.3rem);
 }
 
 .thirdth-item:hover ~ .nav__selector {
-    -webkit-transform: translateX(15.4rem);
-        -ms-transform: translateX(15.4rem);
-            transform: translateX(15.4rem);
+    transform: translateX(15.4rem);
 }
 
 .fourth-item:hover ~ .nav__selector {
-    -webkit-transform: translateX(24.7rem);
-        -ms-transform: translateX(24.7rem);
-            transform: translateX(24.7rem);
+    transform: translateX(24.7rem);
 }
 
 .fifth-item:hover ~ .nav__selector {
-    -webkit-transform: translateX(33.8rem);
-        -ms-transform: translateX(33.8rem);
-            transform: translateX(33.8rem);
+    transform: translateX(33.8rem);
 }
 
 .sixth-item:hover ~ .nav__selector {
-    -webkit-transform: translateX(43.2rem);
-        -ms-transform: translateX(43.2rem);
-            transform: translateX(43.2rem);
+    transform: translateX(43.2rem);
 }
 
 
@@ -157,16 +108,9 @@ main > *:nth-child(4) {
 .main__home {
     background: url(../img/UpPage.png);
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
 }
 
@@ -189,9 +133,7 @@ main > *:nth-child(4) {
 }
 
 .home__scroll {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
     font-size: 1.5rem;
     width: 3rem;
     height: 3rem;
@@ -228,14 +170,9 @@ main > *:nth-child(4) {
 
 .about__features {
     list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .about__feature {
@@ -269,11 +206,8 @@ main > *:nth-child(4) {
 /* News */
 
 .news {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 1fr;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template: 1fr 1fr / 1fr 1fr;
+    grid-template: 1fr 1fr / 1fr 1fr;
 }
 
 .news__block {
@@ -344,14 +278,9 @@ main > *:nth-child(4) {
 .actions {
     height: 20rem;
     background-color: #11749e;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .actions__action {
@@ -373,15 +302,9 @@ main > *:nth-child(4) {
 .main-feature {
     background: url(../img/main-feature.png) center/cover;
     color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main-feature__container {
@@ -463,14 +386,9 @@ main > *:nth-child(4) {
 }
 
 .contact__form {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-rows: auto 1rem auto 1rem auto;
-    -ms-grid-columns: auto 1rem auto 1rem auto;
-        grid-template: repeat(3, auto) / repeat(3, auto);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    grid-template: repeat(3, auto) / repeat(3, auto);
+    justify-content: center;
     grid-gap: 1rem 1rem;
     width: 100%;
 }
@@ -485,17 +403,14 @@ main > *:nth-child(4) {
 }
 
 .contact__form input[value = "Message"] {
-    -ms-grid-column-span: 3;
     grid-column: span 3;
     width: 100%;
 }
 
 .contact__form input[type = "submit"] {
-    -ms-grid-column-span: 3;
     grid-column: span 3;
     width: 30%;
-    -ms-grid-column-align: center;
-        justify-self: center;
+    justify-self: center;
     font-weight: bold;
     font-size: 2rem;
     height: 3.5rem;
