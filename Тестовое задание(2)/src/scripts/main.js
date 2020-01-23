@@ -296,7 +296,7 @@ function readingRequests() {
               userQuerys[targetID].query.replace(/ /g, "+"),
               userQuerys[targetID].maxResults,
               userQuerys[targetID].order === "none"
-                ? "date"
+                ? "relevance"
                 : userQuerys[targetID].order
             );
           }
