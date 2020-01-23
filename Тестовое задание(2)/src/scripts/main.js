@@ -476,7 +476,6 @@ function youtube(keywords, maxResults, order) {
                 <img class = "video__image" src = https://i1.ytimg.com/vi/${item.id.videoId}/sddefault.jpg>
                 <h3 class = "video__title">${item.snippet.title}</h3>
                 <p class = "video__channel">${item.snippet.channelTitle}</p>
-                <p class = "video__views"></p>
                 </a>              
               </li>
             
