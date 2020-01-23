@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Project</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Modal module -->
+    <div class="backdrop"></div>
+    <form action="" class="modal--save">
+        <h3>Сохранить запрос</h3>
+        <div class="modal__input-container">
+            <label for="query">Запрос</label>
+            <input type='text' name="query" disabled>
+            <label for="name">Название</label>
+            <input type='text' name="name" required value="Укажите название">
+            <label for="sort">Сортировать по:</label>
+            <select name="sort">
+                <option value="none">Без сортировки</option>
+                <option value="date">Дате</option>
+                <option value="rating">Рейтингу</option>
+                <option value="title">Названию</option>
+                <option value="view">Просмотрам</option>
+            </select>
+        </div>
+        <div class="modal__range-container">
+            <label for="maxAmount">Максимальное количество</label>
+            <input type="range" name="maxAmount" min='0' max='50' value='12'>
+            <span>12</span>
+        </div>
+        <div class="modal__btns-container">
+            <button type = "button" id = 'save__close-modal'>Не сохранять</button>
+            <button type='submit' class='button'>Сохранить</button>
+        </div>
+    </form>
+    <form action="" class="modal--edit">
+        <h3>Изменить запрос</h3>
+        <div class="modal__input-container">
+            <label for="query">Запрос</label>
+            <input type='text' name="query">
+            <label for="name">Название</label>
+            <input type='text' name="name" required value="Укажите название">
+            <label for="sort">Сортировать по:</label>
+            <select name="sort">
+                <option value="none">Без сортировки</option>
+                <option value="date">Дате</option>
+                <option value="rating">Рейтингу</option>
+                <option value="title">Названию</option>
+                <option value="view">Просмотрам</option>
+            </select>
+        </div>
+        <div class="modal__range-container">
+            <label for="maxAmount">Максимальное количество</label>
+            <input type="range" name="maxAmount" min='0' max='50' value='12'>
+            <span>12</span>
+        </div>
+        <div class="modal__btns-container">
+            <button class='button' type = "button" id = 'edit__close-modal'>Не изменять</button>
+            <button type='submit' class='button'>Изменить</button>
+        </div>
+    </form>
+    <!-- End Modal module -->
+    <!-- Start Auth module -->
+    <form action="" class="login-form">
+        <h1>Вход</h1>
+        <label for="login">Логин:</label>
+        <input type='text' name="login" id="login">
+        <label for="password">Пароль:</label>
+        <input type='password' name="password" id="password">
+        <button type="submit" class="button">Войти</button>
+    </form>
+    <!-- End Auth module -->
+    <!-- Start Navigation -->
+    <nav class="main__nav">
+        <ul class="nav__items">
+            <li class="nav__item active">Поиск</li>
+            <li class="nav__item">Избранное</li>
+        </ul>
+        <button id="unlogin" class="button">Выйти</button>
+    </nav>
+    <!-- End Navigation -->
+    <!-- Start Main module -->
+    <main class="main">
+        <h1 class="page-title">Поиск видео</h1>
+        <form class="form--search-video">
+            <input type="text" class="search-video__input">
+            <div class="input-heart">
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.8401 3.60999C20.3294 3.099 19.7229 2.69364 19.0555 2.41708C18.388 2.14052 17.6726 1.99817 16.9501 1.99817C16.2276 1.99817 15.5122 2.14052 14.8448 2.41708C14.1773 2.69364 13.5709 3.099 13.0601 3.60999L12.0001 4.66999L10.9401 3.60999C9.90843 2.5783 8.50915 1.9987 7.05012 1.9987C5.59109 1.9987 4.19181 2.5783 3.16012 3.60999C2.12843 4.64169 1.54883 6.04096 1.54883 7.49999C1.54883 8.95903 2.12843 10.3583 3.16012 11.39L4.22012 12.45L12.0001 20.23L19.7801 12.45L20.8401 11.39C21.3511 10.8792 21.7565 10.2728 22.033 9.60535C22.3096 8.93789 22.4519 8.22248 22.4519 7.49999C22.4519 6.77751 22.3096 6.0621 22.033 5.39464C21.7565 4.72718 21.3511 4.12075 20.8401 3.60999V3.60999Z"
+                        stroke="#1390E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <button type="submit" class="button submit-btn">Найти</button>
+        </form>
+        <div class="filter-panel">
+            <div>
+                <p class="filter-panel__queryName">Some text</p>
+                <p class="filter-panel__querysAmount video__views">Amount of results</p>
+            </div>
+            <div class="filter-panel__change-view">
+                <img class="change-view__list active" src="./src/img/list.svg">
+                <img class="change-view__grid" src="./src/img/grid.svg">
+            </div>
+        </div>
+        <ul class="video-list">
+        </ul>
+    </main>
+    <!-- End Main Module -->
+    <!-- Start Favourites module -->
+    <div class="favourites">
+        <h1 class="page-title">Избранное</h1>
+        <ul class='fav__items'>
+
+        </ul>
+    </div>
+    <!-- End Favourites module -->
+
+</body>
+
+</html>
